@@ -1,0 +1,16 @@
+import java.util.*;
+class Main {  
+  public static void main(String args[]) { 
+    List<Boolean> list=new ArrayList<Boolean>();
+    list.add(true);  
+    list.add(false);  
+    list.add(false);  
+    list.add(true); 
+    
+    int i = 0;
+    do{
+      System.out.println(list.get(i));
+      i++;
+    }while(i<list.size());
+  } 
+}
