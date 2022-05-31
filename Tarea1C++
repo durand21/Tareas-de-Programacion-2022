@@ -1,0 +1,11 @@
+#include  <iostream>
+
+int main (){
+
+    std::cout << "Nombre: Rommen Jahir Durand Pereira\n";
+    std::cout << "Fecha de Nacimiento: 21 de abril del 2005\n";
+    std::cout << "Edad: 17 Años\n";
+    std::cout << "Hobby Favorito: Jugar en la PS4\n";
+    std::cout << "Grupo/Artista Favorito: Guns N' Roses\n";
+    return 0;
+}
