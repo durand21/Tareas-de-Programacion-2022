@@ -1,0 +1,19 @@
+import java.util.*;
+class Main {  
+  public static void main(String args[]) {
+    int a,b,c;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Ingrese A");
+    a = sc.nextInt();
+     System.out.println("Ingrese B");
+    b = sc.nextInt();
+    System.out.println("Ingrese C");
+    c = sc.nextInt();
+  
+    double resultado = ((a*a)*c)/b ;
+
+    
+    System.out.println("resultado de la Formula: "+resultado);
+    
+  } 
+}
