@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int a,b ;
+    cout << "Ingreso el valor de a: \n";
+    cin >> a;
+    cout << "Ingrese el valor de b: \n";
+    cin >> b;
+    if (a>b)  
+        cout << "A es mayor que B \n" ;
+    else
+        if (a<b)
+         cout <<"A es menor que B\n";
+
+    else 
+        if (a==b)
+         cout << "Los numeros son iguales \n";
+
+
+
+
+    cout << "Ingreso el valor de a nuevamente: \n";
+    cin >> a;
+    cout << "Ingrese el valor de b nuevamente: \n";
+    cin >> b;
+    if (a>b)  
+        cout << "A es mayor que B \n" ;
+    else
+        if (a<b)
+         cout <<"A es menor que B\n";
+
+    else 
+        if (a==b)
+         cout << "Los numeros son iguales \n";
+
+
+
+    cout << "Ingreso el valor de a nuevamente: \n";
+    cin >> a;
+    cout << "Ingrese el valor de b nuevamente: \n";
+    cin >> b;
+    if (a>b)  
+        cout << "A es mayor que B \n" ;
+    else
+        if (a<b)
+         cout <<"A es menor que B\n";
+
+    else 
+        if (a==b)
+         cout << "Los numeros son iguales \n";
+
+
+
+  
+    
+    return 0;
+}
