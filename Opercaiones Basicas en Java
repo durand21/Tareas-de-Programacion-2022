@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class Main {
+public static void main(String args[]) { 
+Scanner operaciones =new Scanner(System.in);
+int menu = 0;
+
+while(menu != 5){
+  System.out.println("1. Suma");
+  System.out.println("2. Resta");
+  System.out.println("3. Multiplicacion");
+  System.out.println("4. Division");
+  System.out.println("5. Salir ");
+  
+  System.out.print("Ingrese una Opcion: ");
+  menu =operaciones.nextInt();
+   if(menu == 1){
+     System.out.println("Bienvenido a Suma ");
+     System.out.println("1. Ingresar primer digito");
+     int numero1 = operaciones.nextInt();
+     System.out.println("2. Ingresar segundo digito");
+     int numero2 = operaciones.nextInt();
+     System.out.println(numero1+numero2 +" es el resultado final de la suma.");
+   }else if (menu == 2) {
+     System.out.println("Bienvenido a Resta ");
+     System.out.println("1. Ingresar primer digito");
+     int numero1 = operaciones.nextInt();
+     System.out.println("2. Ingresar segundo digito");
+     int numero2 = operaciones.nextInt();
+     System.out.println(numero1-numero2 +" es el resultado final de la resta.");
+    }else if (menu == 3) {
+     System.out.println("Bienvenido a Multiplicacion ");
+     System.out.println("1. Ingresar primer digito");
+     int numero1 = operaciones.nextInt();
+     System.out.println("2. Ingresar segundo digito");
+     int numero2 = operaciones.nextInt();
+     System.out.println(numero1*numero2 +" es el resultado final de la Multiplicacion.");
+    }else if (menu == 4) {
+     System.out.println("Bienvenido a Division ");
+     System.out.println("1. Ingresar primer digito");
+     int numero1 = operaciones.nextInt();
+     System.out.println("2. Ingresar segundo digito");
+     int numero2 = operaciones.nextInt();
+     System.out.println(numero1/numero2 +" es el resultado final de la Division.");
+     }else if (menu > 5) {
+     System.out.println("La opcion no esta disponible ");
+
+
+
+   }
+
+   }
+
+   }
+  } 
