@@ -1,0 +1,149 @@
+print('   \n')
+print('Bienvenido a la caja registradora\n')
+menu = 0
+caja = 0
+
+productos = []
+productos.append("Cafe")
+productos.append("Elote")
+productos.append("Frijol")
+productos.append("Platano")
+cafenombre ="Cafe"
+cafeprecioCompra= 10 
+cafeprecioVenta= 15
+cafecantidadEnCaja=0
+cafecantidadVendido =0
+elotenombre = "Elote"
+eloteprecioCompra= 12
+eloteprecioVenta= 17
+elotecantidadEnCaja=0
+elotecantidadVendido=0
+frijolnombre = "Frijol"
+frijolprecioCompra= 15 
+frijolprecioVenta= 20
+frijolcantidadEnCaja=0
+frijolcantidadVendido=0
+platanonombre = "Platano"
+platanoprecioCompra= 18
+platanoprecioVenta= 23
+platanocantidadEnCaja=0
+platanocantidadVendido = 0
+ 
+while menu != 5:
+    print("1. Abrir Caja")
+    print("2. Comprar Producto")
+    print("3. Venta de Producto")
+    print("4. Reportes")
+    print("5. Salir ")
+    print("Dinero en caja: Lps ", + caja )
+    print("Ingrese una Opcion: ")
+    menu = int(input())
+    if menu == 1:
+     print("Bienvenido a Abri caja: ")
+     print("1. Ingresar dinero")
+     print("2. Sacar dinero")
+     print("Ingrese opcion: ")
+     abrirCajaMenu = int(input())
+     if abrirCajaMenu == 1:
+       print("Ingrese la cantidad de dinero: ")
+       dineroIngresado = int(input())
+       caja = caja+dineroIngresado
+       print("Dinero depositado")
+     elif abrirCajaMenu == 2:
+       print("Ingrese la cantidad de dinero a retirar: ")
+       dineroRetirado = int(input())
+     if abrirCajaMenu == 2 and dineroRetirado > caja :
+        print(" Dinero insuficiente en caja para poder ser retirado.") 
+     elif abrirCajaMenu ==2  and dineroRetirado <= caja : 
+        caja = caja-dineroRetirado
+        print(" Dinero retirado.") 
+       
+    if menu== 2:
+         print("Bienvenido a compra de producto")
+         print("1. Cafe")
+         print("2. Elote")
+         print("3. Frijol")
+         print("4. Platano")
+         menu2 = int(input())
+         if menu2 == 1 and caja < cafeprecioCompra:
+            print("Dinero insuficiente en caja no se pudo realizar compra")
+         elif menu2 == 1 and caja > cafeprecioCompra:
+           caja = caja - cafeprecioCompra
+           cafecantidadEnCaja = cafecantidadEnCaja+1
+           print("Compra realizada ")
+ 
+         if menu2 == 2 and caja < eloteprecioCompra:
+            print("Dinero insuficiente en caja no se pudo realizar compra")
+         elif menu2 == 2 and caja > eloteprecioCompra:
+           caja = caja - eloteprecioCompra
+           elotecantidadEnCaja = elotecantidadEnCaja+1
+           print("Compra realizada ")
+
+         if menu2 == 3 and caja < frijolprecioCompra:
+            print("Dinero insuficiente en caja no se pudo realizar compra")
+         elif menu2 == 3 and caja > frijolprecioCompra:
+           caja = caja - frijolprecioCompra
+           frijolcantidadEnCaja = frijolcantidadEnCaja+1;   
+           print("Compra realizada ")
+
+         if menu2 == 4 and caja < platanoprecioCompra:
+           print("Dinero insuficiente en caja no se pudo realizar compra")
+         elif menu2 == 4 and caja > platanoprecioCompra:
+           caja = caja - platanoprecioCompra
+           platanocantidadEnCaja = platanocantidadEnCaja+1
+           print("Compra realizada ")
+
+
+    if menu == 3:
+          print("Bienvenidos a Ventas ")
+          print("1. Cafe")
+          print("2. Elote")
+          print("3. Frijol")
+          print("4. Platano")
+          menu2 = int(input())
+          if menu2 == 1 and cafecantidadEnCaja == 0:
+            print("El producto no esta disponible")
+          elif menu2 ==1 and cafecantidadEnCaja > 0:
+           print("Venta realizada ")
+           caja = caja+cafeprecioVenta
+           cafecantidadVendido += 1
+           cafecantidadEnCaja = cafecantidadEnCaja-1
+           
+         
+          if menu2 == 2 and elotecantidadEnCaja == 0:
+            print("El producto no esta disponible")
+          elif menu2 ==2 and elotecantidadEnCaja > 0:
+           print("Venta realizada ")
+           caja = caja+eloteprecioVenta
+           elotecantidadVendido += 1
+           elotecantidadEnCaja = elotecantidadEnCaja-1
+           
+         
+          if menu2 == 3 and frijolcantidadEnCaja == 0:
+            print("El producto no esta disponible")
+          elif menu2 ==3 and frijolcantidadEnCaja > 0:
+           caja = caja+frijolprecioVenta
+           frijolcantidadVendido += 1
+           frijolcantidadEnCaja = frijolcantidadEnCaja-1
+           print("Venta realizada ")
+         
+          if menu2 == 4 and platanocantidadEnCaja == 0:
+           print("El producto no esta disponible")
+          elif menu2 == 4 and platanocantidadEnCaja > 0:
+           caja = caja+platanoprecioVenta
+           platanocantidadVendido += 1
+           platanocantidadEnCaja = platanocantidadEnCaja-1
+           print("Venta realizada ")
+         
+    if menu == 4:
+            print(" Productos Vendidos")
+            print("Cafe: " + str(cafecantidadVendido))
+            print("Elote: " + str(elotecantidadVendido))
+            print("Frijoles: " + str(frijolcantidadVendido))
+            print("Platano: " + str(platanocantidadVendido))
+            print(" Productos en Caja")
+            print("Cafe: " + str(cafecantidadEnCaja))
+            print("Elote: " + str(elotecantidadEnCaja))
+            print("Frijoles: " + str(frijolcantidadEnCaja))
+            print("Platano: " + str(platanocantidadEnCaja))
+            continuar = input("Hacer click en la tecla \'Enter\' para salir de la opcion \'Informes\'")
